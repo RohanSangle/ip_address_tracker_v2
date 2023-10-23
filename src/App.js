@@ -58,11 +58,11 @@ function App() {
   return (
     <>
       <section>
-        <div className="">
-          <img src={background} alt="" className="" />
+        <div>
+          <img src={background} alt="" className="backimg" />
         </div>
 
-        <div className="">
+        <div className="header">
           <h1 className="">
             IP Address Tracker
           </h1>
@@ -70,7 +70,7 @@ function App() {
           <form
             onSubmit={handleSubmit}
             autoComplete="off"
-            className=""
+            className="inputform"
           >
             <input
               type="text"
@@ -81,7 +81,7 @@ function App() {
               value={ipAddress}
               onChange={(e) => setIpAddress(e.target.value)}
             />
-            <button type="submit" className="">
+            <button type="submit" className="submit">
               <img src={arrow} alt="" />
             </button>
           </form>
@@ -89,14 +89,14 @@ function App() {
 
         {address && (
           <>
-            <article className="">
+            <article className="info">
               <div
-                className=""
+                className="info-block"
                 style={{
                   zIndex: 10000,
                 }}
               >
-                <article className="">
+                <article className="info-container">
                   <h2 className="">
                     IP Address
                   </h2>
@@ -105,21 +105,21 @@ function App() {
                   </p>
                 </article>
 
-                <article className="">
+                <article className="info-container">
                   <h2 className="">Location</h2>
                   <p className="">
                     {address.location.city}, {address.location.region}
                   </p>
                 </article>
 
-                <article className="">
+                <article className="info-container">
                   <h2 className="">Timezone</h2>
                   <p className="">
                     UTC {address.location.timezone}
                   </p>
                 </article>
 
-                <article className="">
+                <article className="info-container">
                   <h2 className="">ISP</h2>
                   <p className="">
                     {address.isp}
@@ -133,7 +133,7 @@ function App() {
               center={[address.location.lat, address.location.lng]}
               zoom={13}
               scrollWheelZoom={true}
-              style={{ height: "100vh", width: "100vw" }}
+              style={{ height: "70vh", width: "99vw" }}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

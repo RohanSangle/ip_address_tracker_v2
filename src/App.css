@@ -1,4 +1,118 @@
-*{
+/* src/styles/App.css */
+
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.backimg{
+  position: absolute;
+  top: -2%;
+  width: 100%;
+}
+
+.header{
+  height: 50%;
+
+  >h1{
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 45%;
+    margin-top: 2%;
+    color: white;
+    word-spacing: 2px;
+  }
+  
+  .inputform{
+    position: relative;
+    margin-left: 45%;
+    /* margin-top: 2%; */
+    height: 70%;
+    /* border-radius: 10px; */
+  
+    >input{
+      position: relative;
+      height: 70%;
+      border-radius: 5px;
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+    }
+  
+    .submit{
+      position: relative;
+      height: 50%;
+      background-color: black;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+.info{
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-left: 8%;
+  /* margin-top: 2%; */
+
+  .info-block{
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 75%;
+    height: 100px;
+    margin-left: 10%;
+    margin-top: 2%;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -1%;
+    margin-top: 4%;
+    width: 300px;
+    height: 125px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    >p{
+      /* margin-left: -60%; */
+      /* margin-top: 2%; */
+      font-size:larger;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: hsl(0, 0%, 17%);
+    }
+
+    >h2{
+      position: relative;
+      margin-top: 10%;
+      margin-bottom: 8%;
+      margin-right: 50%;
+      color: hsl(0, 0%, 59%);
+      font-size: small;
+      font-weight:700;
+      text-transform: uppercase;
+    }
+  }
+
+  
+}
+
+
+@media screen and (max-width: 600px) {
+  .search-input {
+    width: 200px;
+  }
 }
