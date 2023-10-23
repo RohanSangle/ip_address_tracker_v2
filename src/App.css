@@ -28,14 +28,16 @@ body {
   
   .inputform{
     position: relative;
-    margin-left: 45%;
+    margin-left: 43%;
     /* margin-top: 2%; */
-    height: 70%;
+    /* height: 70%; */
+    /* line-height: 50%; */
     /* border-radius: 10px; */
   
     >input{
       position: relative;
-      height: 70%;
+      /* line-height: 50%; */
+      width: 30%;
       border-radius: 5px;
       /* display: flex;
       align-items: center;
@@ -58,7 +60,7 @@ body {
   display: flex;
   flex-direction: row;
   margin-left: 8%;
-  /* margin-top: 2%; */
+  /* margin-top: 22%; */
 
   .info-block{
     /* position: relative; */
@@ -111,8 +113,10 @@ body {
 }
 
 
-@media screen and (max-width: 600px) {
-  .search-input {
-    width: 200px;
+@media screen and (max-width: 425px) {
+  .info-container{
+    display: flex;
+    flex-direction:row;
   }
+  
 }

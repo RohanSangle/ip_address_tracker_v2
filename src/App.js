@@ -133,7 +133,7 @@ function App() {
               center={[address.location.lat, address.location.lng]}
               zoom={13}
               scrollWheelZoom={true}
-              style={{ height: "70vh", width: "99vw" }}
+              style={{ height: "65vh", width: "99vw",}}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
