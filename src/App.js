@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react"
 import { MapContainer, TileLayer } from "react-leaflet"
+
+import './App.css'
 import "leaflet/dist/leaflet.css"
+
 import background from "./images/pattern-bg.png"
 import arrow from "./images/icon-arrow.svg"
 import Markerposition from "./components/Markerposition"
 
-import './App.css'
 
 
 function App() {
   const [address, setAddress] = useState(null)
   const [ipAddress, setIpAddress] = useState("")
+
   const checkIpAddress =
     /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/gi
   const checkDomain =
@@ -43,7 +46,7 @@ function App() {
           ? `domain=${ipAddress}`
           : ""
       }`
-      // https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=8.8.8.8&domain=google.com
+      
     )
     const data = await res.json()
     setAddress(data)
